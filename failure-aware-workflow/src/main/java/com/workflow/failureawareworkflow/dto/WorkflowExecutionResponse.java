@@ -10,16 +10,14 @@ import java.util.UUID;
 @Builder
 @AllArgsConstructor
 @NoArgsConstructor
-public class WorkflowStatusResponse {
+public class WorkflowExecutionResponse {
 
     private String workflowId;
 
-    private String workflowName;
-
     private WorkflowStatus status;
 
-    private Integer currentStep;
+    private String currentStep;
 
-    private String stepName;
+    private String message;
 
 }

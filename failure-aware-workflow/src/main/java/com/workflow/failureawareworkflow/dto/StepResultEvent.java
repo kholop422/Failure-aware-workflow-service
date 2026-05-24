@@ -1,5 +1,6 @@
 package com.workflow.failureawareworkflow.dto;
 
+import com.workflow.failureawareworkflow.enums.FailureType;
 import lombok.*;
 
 import java.util.UUID;
@@ -11,7 +12,7 @@ import java.util.UUID;
 @Builder
 public class StepResultEvent {
 
-    private UUID workflowId;
+    private String workflowId;
 
     private UUID stepId;
 
@@ -20,5 +21,6 @@ public class StepResultEvent {
     private boolean success;
 
     private String errorMessage;
+    private FailureType failureType;
 
 }

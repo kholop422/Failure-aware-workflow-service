@@ -1,5 +1,6 @@
 package com.workflow.failureawareworkflow.entity;
 
+import com.workflow.failureawareworkflow.enums.FailureType;
 import com.workflow.failureawareworkflow.enums.StepStatus;
 import jakarta.persistence.*;
 import lombok.*;
@@ -30,6 +31,11 @@ public class WorkflowStepEntity {
 
     @Enumerated(EnumType.STRING)
     private StepStatus status;
+
+    private String errorMessage;
+
+    @Enumerated(EnumType.STRING)
+    private FailureType failureType;
 
     @ManyToOne
     @JoinColumn(name="workflow_id")

@@ -3,6 +3,7 @@ package com.workflow.failureawareworkflow.dto;
 import com.workflow.failureawareworkflow.enums.WorkflowStatus;
 import lombok.*;
 
+import java.time.LocalDateTime;
 import java.util.UUID;
 
 @Getter
@@ -10,7 +11,7 @@ import java.util.UUID;
 @Builder
 @AllArgsConstructor
 @NoArgsConstructor
-public class WorkflowStatusResponse {
+public class WorkflowCreateResponse {
 
     private String workflowId;
 
@@ -18,8 +19,8 @@ public class WorkflowStatusResponse {
 
     private WorkflowStatus status;
 
-    private Integer currentStep;
+    private Integer totalSteps;
 
-    private String stepName;
+    private LocalDateTime createdAt;
 
 }

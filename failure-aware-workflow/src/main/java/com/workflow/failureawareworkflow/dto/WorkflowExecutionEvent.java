@@ -11,7 +11,7 @@ import java.util.UUID;
 @Builder
 public class WorkflowExecutionEvent {
 
-    private UUID workflowId;
+    private String workflowId;
 
     private UUID stepId;
 

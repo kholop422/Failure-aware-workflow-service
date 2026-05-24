@@ -18,8 +18,7 @@ import java.util.UUID;
 public class WorkflowEntity {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.UUID)
-    private UUID workflowId;
+    private String workflowId;
 
     private String workflowName;
 

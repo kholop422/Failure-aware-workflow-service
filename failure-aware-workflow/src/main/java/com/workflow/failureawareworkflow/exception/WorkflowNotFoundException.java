@@ -6,7 +6,7 @@ public class WorkflowNotFoundException
         extends RuntimeException {
 
     public WorkflowNotFoundException(
-            UUID workflowId
+            String workflowId
     ) {
 
         super(

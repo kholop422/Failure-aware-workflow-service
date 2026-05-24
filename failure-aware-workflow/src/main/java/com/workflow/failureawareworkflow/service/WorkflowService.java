@@ -1,17 +1,17 @@
 package com.workflow.failureawareworkflow.service;
 
-import com.workflow.failureawareworkflow.dto.CreateWorkflowRequest;
-import com.workflow.failureawareworkflow.dto.StepResultEvent;
-import com.workflow.failureawareworkflow.dto.WorkflowStatusResponse;
+import com.workflow.failureawareworkflow.dto.*;
 
 import java.util.UUID;
 
 public interface WorkflowService {
 
-    UUID createWorkflow(CreateWorkflowRequest request);
+    WorkflowCreateResponse createWorkflow(CreateWorkflowRequest request);
 
-    void executeWorkflow(UUID workflowId);
+    WorkflowExecutionResponse executeWorkflow(String workflowId);
     void handleResult(StepResultEvent result);
 
-    WorkflowStatusResponse getWorkflowStatus(UUID workflowId);
+    WorkflowStatusResponse getWorkflowStatus(String workflowId);
+
+    FailureAnalysisResponse getFailureAnalysis(String workflowId);
 }
