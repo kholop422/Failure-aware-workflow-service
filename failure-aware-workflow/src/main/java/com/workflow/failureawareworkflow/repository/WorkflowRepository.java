@@ -1,0 +1,12 @@
+package com.workflow.failureawareworkflow.repository;
+
+import com.workflow.failureawareworkflow.entity.WorkflowEntity;
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
+
+import java.util.UUID;
+
+@Repository
+public interface WorkflowRepository extends JpaRepository<WorkflowEntity, String> {
+
+}
